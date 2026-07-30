@@ -916,3 +916,170 @@ body {
 
 }
 
+.footer{
+    background: #0A0A0A;
+    padding: 80px 0 20px;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-brand{
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: footerLeft .8s ease forwards;
+}
+
+.footer-brand img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-brand p{
+    color: #A5A5A5;
+    line-height: 1.8;
+    max-width: 300px;
+}
+
+.social-links{
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-links a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: .3s ease;
+    animation: iconPop .5s ease forwards;
+}
+
+.social-links a:nth-child(1){
+    animation-delay: .3s;
+}
+
+.social-links a:nth-child(2){
+    animation-delay: .5s;
+}
+
+.social-links a:nth-child(3){
+    animation-delay: .7s;
+}
+
+.social-links a:nth-child(4){
+    animation-delay: .9s;
+}
+
+.social-links a:hover{
+    background: #F97316;
+    transform: translateY(-5px);
+}
+
+.footer-links,
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: footerUp .8s ease forwards;
+}
+
+.footer-links:nth-child(2){
+    animation-delay: .2s;
+}
+
+.footer-links:nth-child(3){
+    animation-delay: .4s;
+}
+
+.footer-contact{
+    animation-delay: .6s;
+}
+
+.footer h3{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-links a{
+    color: #A5A5A5;
+    transition: .3s ease;
+}
+
+.footer-links a:hover{
+    color: #F97316;
+}
+
+.footer-contact p{
+    color: #A5A5A5;
+}
+
+.footer-contact i{
+    color: #F97316;
+    margin-right: 10px;
+}
+
+.footer-bottom{
+    border-top: 1px solid #222;
+    margin-top: 60px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p{
+    color: #777;
+    font-size: 14px;
+}
+
+@keyframes footerLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes footerUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes iconPop{
+
+    from{
+        opacity:0;
+        transform:scale(.5);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
